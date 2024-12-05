@@ -53,7 +53,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 50px;
+    height: 45px;
     background-color: gray;
     z-index: 99999;
 
@@ -72,7 +72,7 @@
 .bd-h4 {
 
     position: relative;
-    bottom: 18px;
+    bottom: 21px;
     left: 5px;
 
 }
