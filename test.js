@@ -5,11 +5,6 @@ function wait(ms) {
     return new Promise(resolve => setTimeout(resolve, ms * 1000));
 }
 
-// Example usage
-wait(2000).then(() => {
-    console.log('Waited 2 seconds!');
-});
-
 box.addEventListener('mouseenter', () => {
 
     if (debounce) {return;}
