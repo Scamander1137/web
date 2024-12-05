@@ -1,5 +1,4 @@
 const box = document.getElementById('hover-mainDiv');
-const ihs = document.getElementById('ihs');
 let debounce = false;
 
 function wait(ms) {
@@ -24,11 +23,5 @@ box.addEventListener('mouseenter', () => {
 box.addEventListener('click', () => {
 
     window.location.href='https://i.pinimg.com/564x/2e/1d/6b/2e1d6be769bcd31c101cbe88636e019c.jpg';
-
-});
-
-ihs.addEventListener('click', () => {
-
-    window.location.href='https://discord.gg/UcpVCEAawM';
 
 });
