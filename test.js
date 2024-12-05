@@ -1,14 +1,27 @@
 const box = document.getElementById('hover-mainDiv');
+let debounce = false;
+
+function wait(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms * 1000));
+}
+
+// Example usage
+wait(2000).then(() => {
+    console.log('Waited 2 seconds!');
+});
 
 box.addEventListener('mouseenter', () => {
 
+    if (debounce) {return;}
+    debounce = true;
     box.classList.add('animate');
 
-});
+    wait(0.5).then(() => {
 
-box.addEventListener('mouseleave', () => {
+        debounce = false;
+        box.classList.remove('animate');
 
-    box.classList.remove('animate');
+    })
 
 });
 
