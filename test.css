@@ -149,7 +149,7 @@ body {
     width: 30px;
     position: fixed;
     right: 6px;
-    bottom: 8px;
+    bottom: 100px;
     transform: scaleY(0);
     cursor: pointer;
 
