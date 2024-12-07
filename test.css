@@ -70,7 +70,7 @@
 .bd-h4 {
 
     position: relative;
-    bottom: 20.5px;
+    bottom: 19.5px;
     left: 5px;
 
 }
@@ -117,25 +117,40 @@ body {
 
 }
 
+@keyframes ihs-anim1 {
+
+    from { transform: scaleY(1); }
+    to { transform: scaleY(0); }
+
+}
+
+.animation-shrink { animation: ihs-anim1 0.3s forwards ease-in-out; }
+.animation-expand { animation: ihs-anim1 0.3s forwards ease-in-out reverse; }
+
 .bd-div {
 
     position: fixed;
+    right: 6px;
     bottom: 5px;
-    right: 5px;
     height: 32px;
+    width: 30px;
 
 }
 
 .img-ihs {
 
-    height: 100%;
-    cursor: pointer;
+    width: 100%;
     border-radius: 7px;
 
 }
 
-.img-ihs:hover {
+.img-dl {
 
-    border-radius: 13px;
+    width: 30px;
+    position: fixed;
+    right: 6px;
+    bottom: 8px;
+    transform: scaleY(0);
+    cursor: pointer;
 
 }

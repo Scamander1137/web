@@ -1,6 +1,9 @@
 const box = document.getElementById('hover-mainDiv');
-const ihs = document.getElementById("ihs");
+const bdDiv = document.getElementById('ihs-holder')
+const ihs = document.getElementById('ihs');
+const dl = document.getElementById('dl');
 let debounce = false;
+let exit = false;
 
 function wait(ms) {
     return new Promise(resolve => setTimeout(resolve, ms * 1000));
@@ -14,10 +17,10 @@ box.addEventListener('mouseenter', () => {
 
     wait(0.5).then(() => {
 
-        debounce = false;
         box.classList.remove('animate');
+        debounce = false;
 
-    })
+    });
 
 });
 
@@ -27,8 +30,29 @@ box.addEventListener('click', () => {
 
 });
 
-ihs.addEventListener('click', () => {
+bdDiv.addEventListener('mouseenter', () => {
 
-    window.location.href='https://discord.gg/UcpVCEAawM'
+    exit = false;
+    ihs.classList.add('animation-shrink');
 
-})
+    wait(0.3).then(() => {
+
+        if (!exit) {dl.classList.add('animation-expand');}
+
+    });
+
+});
+
+bdDiv.addEventListener('mouseleave', () => {
+
+    exit = true;
+    dl.classList.remove('animation-expand');
+    ihs.classList.remove('animation-shrink');
+
+});
+
+dl.addEventListener('click', () => {
+
+    window.location.href="https://discord.gg/UcpVCEAawM";
+
+});
